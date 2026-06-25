@@ -1,7 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { NAV, SITE } from "@/lib/site";
 import { waLink } from "@/lib/whatsapp";
+import { ArrowUp } from "lucide-react";
 
 export function Footer() {
   const toTop = () => {
@@ -19,16 +21,13 @@ export function Footer() {
           <p className="mt-4 font-display text-[1.3rem] text-paper">Crafted precision, tailored perfection.</p>
           <p className="mt-2 max-w-[38ch] text-[0.9rem]">Stitched &amp; unstitched outfits, custom tailoring, and brand replicas — delivered across Pakistan and worldwide.</p>
           <div className="mt-5 flex gap-5">
-            {SITE.socials.map((s) => (
-              <a key={s.label} href={s.href} className="text-[0.8rem] tracking-[0.06em] transition-colors hover:text-rust">{s.label}</a>
-            ))}
+            {SITE.socials.map((s) => <a key={s.label} href={s.href} className="text-[0.8rem] tracking-[0.06em] transition-colors hover:text-rust">{s.label}</a>)}
           </div>
         </div>
         <nav>
           <h4 className="mb-4 font-display text-[1.05rem] font-medium tracking-[0.06em] text-paper">Explore</h4>
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="block py-[0.3rem] text-[0.9rem] transition-all hover:pl-[6px] hover:text-rust">{n.label}</a>
-          ))}
+          {NAV.map((n) => <Link key={n.href} href={n.href} className="block py-[0.3rem] text-[0.9rem] transition-all hover:pl-[6px] hover:text-rust">{n.label}</Link>)}
+          <Link href="/cart" className="block py-[0.3rem] text-[0.9rem] transition-all hover:pl-[6px] hover:text-rust">Cart</Link>
         </nav>
         <div>
           <h4 className="mb-4 font-display text-[1.05rem] font-medium tracking-[0.06em] text-paper">Contact</h4>
@@ -40,7 +39,7 @@ export function Footer() {
       </div>
       <div className="container-x mt-[clamp(2rem,4vw,3rem)] flex items-center justify-between border-t border-[var(--line-light)] py-[1.6rem] text-[0.78rem]">
         <span>© {new Date().getFullYear()} {SITE.name}. All rights reserved.</span>
-        <button onClick={toTop} aria-label="Back to top" className="grid h-12 w-12 place-items-center rounded-full border border-[var(--line-light)] text-taupe transition-colors hover:border-rust hover:bg-rust hover:text-white">✂</button>
+        <button onClick={toTop} aria-label="Back to top" className="grid h-12 w-12 place-items-center rounded-full border border-[var(--line-light)] text-taupe transition-colors hover:border-rust hover:bg-rust hover:text-white"><ArrowUp size={18} /></button>
       </div>
     </footer>
   );

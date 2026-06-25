@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Reveal } from "./ui/Reveal";
 import { AnimatedTitle } from "./ui/AnimatedTitle";
 import { Img } from "./ui/Img";
-import { WaButton } from "./ui/WaButton";
+import Link from "next/link";
 import { SERVICES } from "@/lib/site";
 
 export function Services() {
@@ -63,9 +63,7 @@ export function Services() {
                 <ul className="ticks my-7">
                   {current.points.map((p) => <li key={p}>{p}</li>)}
                 </ul>
-                <WaButton message={current.wa} className="btn btn-rust mt-auto self-start">
-                  Enquire on WhatsApp <span className="arr">→</span>
-                </WaButton>
+                <Link href="/shop" className="btn btn-rust mt-auto self-start">Shop this <span className="arr">→</span></Link>
               </div>
             </motion.div>
           </AnimatePresence>

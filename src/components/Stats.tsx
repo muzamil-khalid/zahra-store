@@ -13,7 +13,7 @@ export function Stats() {
           <Reveal as="span" className="script">our numbers</Reveal>
           <AnimatedTitle text="Building long-term trust through quality stitching" className="section-title mt-2" accent="trust" />
           <Reveal><p className="my-5 max-w-[46ch] text-muted">We continually refine our craft, invest in skilled tailors, and treat every order — big or small — like it’s our own.</p></Reveal>
-          <Reveal><a href="#contact" className="btn btn-dark">Book a consultation <span className="arr">→</span></a></Reveal>
+          <Reveal><a href="/contact" className="btn btn-dark">Book a consultation <span className="arr">→</span></a></Reveal>
         </div>
         <div className="grid">
           {STATS.map((s, i) => (

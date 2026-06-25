@@ -1,76 +1,45 @@
-# Zahra Stitching Studio — Next.js
+# Zahra Stitching Studio — Next.js (e-commerce style)
 
-A premium, animation-rich showcase site for a stitching studio. **No backend, no database** — all content is hardcoded, and every call-to-action opens **WhatsApp**. Built with **Next.js 14**, **Framer Motion**, **Lenis** (smooth scroll), and **Tailwind CSS**, and exported as fast static HTML for great speed + SEO.
+A premium, animation-rich, multi-page site for a stitching studio. **No backend, no payments** — products go into a **cart**, and the whole order is sent via **WhatsApp** with one tap. Built with **Next.js 14**, **Framer Motion** (site-wide parallax + animations), **Lenis** (smooth scroll), and **Tailwind CSS**, exported as fast static HTML for great speed + SEO.
 
----
+## Pages
+Home · Shop (with category filter) · Product detail · Cart · Checkout · About · Contact — plus a sticky header with a live cart count and a slide-in **cart drawer**.
+
+## How ordering works (no payment)
+1. On a product: choose **Stitched / Unstitched**, **size**, and **quantity** → Add to cart.
+2. Cart drawer / Cart page → **“Order on WhatsApp”** opens WhatsApp with the full order (items, options, quantities, subtotal) ready to send.
+3. Optional **Checkout** page adds name/phone/address to that WhatsApp message. Nothing is stored anywhere.
 
 ## Run it
-
 ```bash
 npm install
 npm run dev          # http://localhost:3000
 ```
 
-## Build a static site (for hosting)
-
+## Build a static site (for hosting / your domain)
 ```bash
-npm run build        # outputs a static site to ./out
+npm run build        # outputs static site to ./out
 ```
+Deploy the **`out/`** folder to Vercel, Netlify, or any static host. (On Vercel just import the repo — it builds automatically; your `zahrastudio.store` domain points here.)
 
-Upload the **`out/`** folder to any static host:
-- **Netlify / Vercel:** connect the repo (build: `npm run build`, publish dir: `out`), or drag the `out` folder onto Netlify.
-- **cPanel / shared hosting:** upload the contents of `out/` to `public_html`.
-- **GitHub Pages:** push `out/` to your Pages branch.
+## The only things to edit — all in `src/lib/site.ts`
+- **WhatsApp number** → `SITE.whatsapp` (digits only, country code, no `+`).
+- **Products** → the `PRODUCTS` array: name, category, price, `stitchingCost` (added when stitched), fabric, sizes, images, description, `featured`, `badge`.
+- **Categories**, **gallery**, **stats**, **testimonials**, **steps**, contact details, nav — all in the same file.
+- **Images**: swap the Unsplash demo URLs for your own photos. Every image has an automatic fallback so the page never looks broken.
 
-> The first build downloads the Google fonts and self-hosts them automatically (needs internet during build). After that the exported site is fully static.
-
----
-
-## The 2 things to change
-
-Everything lives in **`src/lib/site.ts`**:
-
-1. **WhatsApp number** — `SITE.whatsapp` (digits only, with country code, no `+`):
-   ```ts
-   whatsapp: "923001234567",
-   ```
-   Every button, the floating icon, and the consultation form use it automatically.
-
-2. **Images** — swap the Unsplash demo URLs (`IMG`, plus each item in `SERVICES`, `GALLERY`, `PIECES`) for your own photos. Every image has an automatic fallback so the page never looks broken.
-
-Also editable in the same file: services, gallery captions, signature pieces + prices, process steps, stats, testimonials, contact details, and nav.
-
----
-
-## Why it's good for speed & SEO
-
-- **Static HTML export** — pages are pre-rendered, so they load instantly and crawlers see full content.
-- **Self-hosted fonts** via `next/font` (no layout shift, no third-party font request at runtime).
-- Semantic headings, meta/OpenGraph tags, and **JSON-LD** structured data (`ClothingStore`) in the document head.
-- Smooth scrolling + scroll animations that **respect “reduced motion”** preferences.
-
-## Animations (Framer Motion + Lenis)
-
-Scroll-progress bar · word-by-word title reveals · staggered section reveals · hero image clip-reveal + parallax · parallax on About/CTA imagery · animated tab transitions · **pinned horizontal-scroll lookbook** · animated process connector · count-up stats · crossfade testimonials.
-
----
+## Animations
+Site-wide **parallax** (`<Parallax>` / `<ParallaxImage>`), Lenis smooth scroll, scroll-progress bar, word-by-word titles, staggered reveals, pinned horizontal lookbook, count-up stats, animated tabs, and a slide-in cart drawer — all respecting “reduced motion”.
 
 ## Structure
-
 ```
 src/
-  app/
-    layout.tsx     fonts, SEO metadata, JSON-LD, smooth scroll
-    page.tsx       composes all sections
-    globals.css    design tokens, buttons, bespoke effects
-  components/      Hero, Services, Lookbook, Booking, … + ui/ (Reveal, Counter, …)
+  app/            home, shop, shop/[slug], cart, checkout, about, contact
+  components/     Hero, ProductCard, CartDrawer, AddToCart, Parallax, … 
+  context/CartContext.tsx   cart state (localStorage)
   lib/
-    site.ts        ← all content + your WhatsApp number
-    whatsapp.ts    link builder
+    site.ts       ← ALL content + products + WhatsApp number
+    whatsapp.ts   order-message builder + link
 ```
 
-## Notes
-
-- The consultation form has **no server** — on submit it composes a WhatsApp message and opens the chat. Nothing is stored.
-- Demo images are from Unsplash; replace with your own for production.
-- Stack: Next.js 14 · React 18 · Framer Motion · Lenis · Tailwind CSS.
+Stack: Next.js 14 · React 18 · Framer Motion · Lenis · Tailwind CSS.

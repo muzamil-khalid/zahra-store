@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Asterisk } from "lucide-react";
 
 const WORDS = ["Stitched", "Unstitched", "Custom Tailoring", "Brand Replica", "Bridal Couture", "Worldwide Shipping"];
 
@@ -15,7 +16,7 @@ export function Marquee() {
       >
         {row.map((w, i) => (
           <span key={i} className="flex items-center gap-9">
-            {w} <i className="not-italic text-rust">✦</i>
+            {w} <Asterisk size={15} className="text-rust" />
           </span>
         ))}
       </motion.div>

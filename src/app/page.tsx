@@ -1,39 +1,31 @@
-import { Preloader } from "@/components/Preloader";
-import { Header } from "@/components/Header";
-import { Hero } from "@/components/Hero";
+import { HeroPro } from "@/components/HeroPro";
 import { Marquee } from "@/components/Marquee";
+import { StitchAssemble } from "@/components/fx/StitchAssemble";
+import { Categories } from "@/components/Categories";
+import { FeaturedProducts } from "@/components/FeaturedProducts";
 import { About } from "@/components/About";
-import { Services } from "@/components/Services";
 import { Lookbook } from "@/components/Lookbook";
-import { Collection } from "@/components/Collection";
 import { Process } from "@/components/Process";
 import { Stats } from "@/components/Stats";
-import { Booking } from "@/components/Booking";
 import { Testimonials } from "@/components/Testimonials";
 import { ClosingCTA } from "@/components/ClosingCTA";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { StitchThread } from "@/components/fx/StitchThread";
 
 export default function HomePage() {
   return (
     <>
-      <Preloader />
-      <Header />
-      <main>
-        <Hero />
-        <Marquee />
-        <About />
-        <Services />
-        <Lookbook />
-        <Collection />
-        <Process />
-        <Stats />
-        <Booking />
-        <Testimonials />
-        <ClosingCTA />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
+      <StitchThread />
+      <HeroPro />
+      <Marquee />
+      <StitchAssemble />
+      <Categories />
+      <FeaturedProducts />
+      <About />
+      <Lookbook />
+      <Process />
+      <Stats />
+      <Testimonials />
+      <ClosingCTA />
     </>
   );
 }
