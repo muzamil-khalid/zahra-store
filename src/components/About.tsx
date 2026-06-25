@@ -9,10 +9,10 @@ import { WaButton } from "./ui/WaButton";
 import { IMG } from "@/lib/site";
 
 const POINTS = [
-  "Made to your exact measurements",
-  "Send your own fabric, or choose from ours",
-  "Recreate any design or brand you love",
-  "Tracked delivery, in Pakistan & abroad",
+  "Tailored to your exact measurements",
+  "Designer-inspired looks within real budgets",
+  "Worldwide orders & WhatsApp consultations",
+  "Quality craftsmanship in every stitch",
 ];
 
 export function About() {
@@ -38,7 +38,7 @@ export function About() {
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }} whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.4 }}
-            className="absolute -right-[18px] bottom-7 rounded-[6px] bg-rust px-[1.4rem] py-[1.1rem] text-center text-white shadow-[0_20px_40px_-20px_rgba(181,85,46,.7)]"
+            className="absolute -right-[18px] bottom-7 rounded-[6px] bg-rust px-[1.4rem] py-[1.1rem] text-center text-ink shadow-[0_20px_40px_-20px_rgba(181,138,60,.55)]"
           >
             <strong className="block font-display text-[2rem] leading-none">98%</strong>
             <span className="text-[0.7rem] uppercase tracking-[0.08em] opacity-90">perfect-fit rate</span>
@@ -47,10 +47,10 @@ export function About() {
 
         <div>
           <Reveal as="span" className="script">our story</Reveal>
-          <AnimatedTitle text="Crafted with precision, finished with love" className="section-title mt-2" accent="love" />
+          <AnimatedTitle text="From a Home Studio to Customers Around the World" className="section-title mt-2" accent="World" />
           <Reveal delay={1}>
             <p className="mt-5 max-w-[52ch] text-muted">
-              What began as a love for stitching has grown into a studio that dresses women across Pakistan and around the world — with the same care in every single stitch. We blend traditional craftsmanship with a modern, made-to-measure experience.
+              Zahra Stitching Studio began with a simple idea: beautiful outfits deserve beautiful tailoring. What started as stitching for friends and family in Karachi has grown into a trusted studio serving customers across Pakistan and around the world. Today, we create garments with the same care, precision, and attention to detail that built our reputation from day one.
             </p>
           </Reveal>
           <ul className="ticks my-7">

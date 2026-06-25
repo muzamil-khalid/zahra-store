@@ -13,10 +13,11 @@ export const SITE = {
   hours: "Mon–Sat · 10am–8pm (PKT)",
   instagram: "@zahra.stitching.studio",
   socials: [
-    { label: "Instagram", href: "https://instagram.com/zahra.stitching.studio" },
-    { label: "Facebook", href: "#" },
-    { label: "TikTok", href: "#" },
+    { label: "Instagram", href: "https://www.instagram.com/zahra.stitching.studio" },
+    { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100086684887102" },
+    { label: "TikTok", href: "https://www.tiktok.com/@adeelchaudhry33?_r=1&_t=ZS-97V5wXjfFcv" },
   ],
+  showEmail: false,
   url: "https://zahrastudio.store",
 };
 
@@ -43,15 +44,22 @@ export const IMG = {
   lavender: "/img/lavender-suit.jpg",
   hero: "/img/hero-model.jpg",
   about: "/img/studio.jpg",
-  cta: "/img/hero-model.jpg",
+  cta: "/img/brand-wall.jpg",
+  brandWall: "/img/brand-wall.jpg",
+  navyFormal: "/img/navy-formal.jpg",
+  redBridal: "/img/red-bridal.jpg",
+  rust: "/img/rust-suit.jpg",
+  olive: "/img/olive-suit.jpg",
+  heroVideo: "/hero.mp4",
+  heroPoster: "/img/hero-poster.jpg",
 };
 
 export interface Category { id: string; name: string; blurb: string; image: string }
 export const CATEGORIES: Category[] = [
   { id: "stitched", name: "Stitched Suits", blurb: "Ready to wear, finished with care", image: "/img/hero-model.jpg" },
   { id: "unstitched", name: "Unstitched Fabric", blurb: "Design your own, your way", image: "/img/lavender-suit.jpg" },
-  { id: "party", name: "Party & Formal", blurb: "Made for evenings to remember", image: U("photo-1594633312681-425c7b97ccd1") },
-  { id: "bridal", name: "Bridal & Couture", blurb: "Made-to-measure for your big day", image: U("photo-1595777457583-95e059d581b8") },
+  { id: "party", name: "Party & Formal", blurb: "Made for evenings to remember", image: "/img/navy-formal.jpg" },
+  { id: "bridal", name: "Bridal & Couture", blurb: "Made-to-measure for your big day", image: "/img/red-bridal.jpg" },
 ];
 
 export interface Product {
@@ -63,11 +71,13 @@ export const SIZES = ["XS", "S", "M", "L", "XL"];
 export const PRODUCTS: Product[] = [
   { slug: "lavender-embroidered-3-piece", name: "Lavender Embroidered 3-Piece", category: "party", price: 9500, stitchingCost: 3000, fabric: "Embroidered Lawn", description: "A soft lavender three-piece with intricate thread-work, scalloped lace hems and a finely finished neckline — graceful for day or evening. Available unstitched, or add made-to-measure stitching.", sizes: SIZES, images: ["/img/lavender-suit.jpg", "/img/craft.jpg"], featured: true, badge: "New" },
   { slug: "grey-luxe-embroidered-suit", name: "Grey Luxe Embroidered Suit", category: "stitched", price: 11500, stitchingCost: 3500, fabric: "Cotton Net", description: "Our signature grey suit with delicate chikankari-style embroidery and lace detailing on the cuffs and hem — finished and ready to wear.", sizes: SIZES, images: ["/img/hero-model.jpg", "/img/studio.jpg"], featured: true, badge: "Bestseller" },
-  { slug: "embroidered-lawn-3-piece", name: "Embroidered Lawn 3-Piece", category: "unstitched", price: 6500, stitchingCost: 2500, fabric: "Premium Lawn", description: "A breezy summer staple in premium lawn with delicate embroidery, a printed dupatta and dyed trousers. Available unstitched, or add stitching to your size.", sizes: SIZES, images: [U("photo-1610030469983-98e550d6193c", 1000), U("photo-1556905055-8f358a7a47b2", 1000)], featured: true },
+  { slug: "navy-velvet-formal-co-ord", name: "Navy Velvet Formal Co-ord", category: "party", price: 18500, stitchingCost: 6000, fabric: "Embellished Velvet", description: "A striking navy velvet blazer-and-trouser co-ord with hand-set embellishment on the cuffs, hem and pockets — tailored for formal evenings and statement occasions.", sizes: SIZES, images: ["/img/navy-formal.jpg", "/img/brand-wall.jpg"], featured: true, badge: "Formal" },
+  { slug: "red-velvet-bridal-gown", name: "Red Velvet Bridal Gown", category: "bridal", price: 65000, stitchingCost: 28000, fabric: "Velvet & Zari", description: "A regal red velvet bridal gown with intricate gold zari work, a flowing dupatta and a richly embellished hem — made to measure for your big day.", sizes: SIZES, images: ["/img/red-bridal.jpg"], featured: true, badge: "Bridal" },
+  { slug: "embroidered-lawn-3-piece", name: "Embroidered Lawn 3-Piece", category: "unstitched", price: 6500, stitchingCost: 2500, fabric: "Premium Lawn", description: "A breezy summer staple in premium lawn with delicate embroidery, a printed dupatta and dyed trousers. Available unstitched, or add stitching to your size.", sizes: SIZES, images: ["/img/rust-suit.jpg", "/img/craft.jpg"], featured: true },
   { slug: "chikankari-cotton-kurti", name: "Chikankari Cotton Kurti", category: "stitched", price: 3800, stitchingCost: 1800, fabric: "Soft Cotton", description: "Hand-finished chikankari kurti in soft cotton — light, elegant and perfect for everyday wear.", sizes: SIZES, images: [U("photo-1583391733956-6c78276477e2", 1000), U("photo-1564257631407-4deb1f99d992", 1000)], featured: true },
   { slug: "chiffon-party-3-piece", name: "Chiffon Party 3-Piece", category: "party", price: 9500, stitchingCost: 3000, fabric: "Chiffon", description: "Flowing chiffon with sequin detailing for parties and evening events. Add custom stitching for a flawless fit.", sizes: SIZES, images: [U("photo-1594633312681-425c7b97ccd1", 1000), U("photo-1583846783214-7229a91b20ed", 1000)] },
   { slug: "velvet-festive-shawl-suit", name: "Velvet Festive Shawl Suit", category: "stitched", price: 16000, stitchingCost: 5000, fabric: "Velvet", description: "Rich velvet suit with an embroidered shawl for Eid and winter festivities.", sizes: SIZES, images: [U("photo-1610189019599-77e9a8d5b8b8", 1000), U("photo-1595777457583-95e059d581b8", 1000)] },
-  { slug: "printed-cotton-2-piece", name: "Printed Cotton 2-Piece", category: "unstitched", price: 3200, stitchingCost: 2000, fabric: "Cotton", description: "Easy everyday two-piece in breathable printed cotton — a warm-weather workhorse.", sizes: SIZES, images: [U("photo-1564257631407-4deb1f99d992", 1000), U("photo-1610030469983-98e550d6193c", 1000)] },
+  { slug: "printed-cotton-2-piece", name: "Printed Cotton 2-Piece", category: "unstitched", price: 3200, stitchingCost: 2000, fabric: "Cotton", description: "Easy everyday two-piece in breathable printed cotton — a warm-weather workhorse.", sizes: SIZES, images: ["/img/olive-suit.jpg", "/img/studio.jpg"] },
   { slug: "mehndi-yellow-festive-set", name: "Mehndi Yellow Festive Set", category: "bridal", price: 13500, stitchingCost: 6000, fabric: "Organza", description: "Cheerful mehndi-ready set with gota detailing and a vibrant dupatta — made to celebrate.", sizes: SIZES, images: [U("photo-1617059062460-1dec8e8e8b0a", 1000), U("photo-1595777457583-95e059d581b8", 1000)], featured: true },
   { slug: "bridal-embroidered-maxi", name: "Bridal Embroidered Maxi", category: "bridal", price: 60000, stitchingCost: 25000, fabric: "Net & Raw Silk", description: "A statement bridal maxi with intricate hand embroidery and a sweeping silhouette — made to measure for your big day.", sizes: SIZES, images: [U("photo-1595777457583-95e059d581b8", 1000), U("photo-1617059062460-1dec8e8e8b0a", 1000)], badge: "Couture" },
 ];
@@ -77,20 +87,20 @@ export function categoryName(id: string) { return CATEGORIES.find((c) => c.id ==
 
 export interface GalleryItem { image: string; caption: string }
 export const GALLERY: GalleryItem[] = [
-  { image: "/img/hero-model.jpg", caption: "Grey luxe embroidery" },
-  { image: "/img/lavender-suit.jpg", caption: "Lavender thread-work" },
   { image: "/img/craft.jpg", caption: "Stitched by hand" },
+  { image: "/img/navy-formal.jpg", caption: "Velvet formal co-ord" },
+  { image: "/img/hero-model.jpg", caption: "Grey luxe embroidery" },
+  { image: "/img/red-bridal.jpg", caption: "Bridal couture" },
   { image: "/img/studio.jpg", caption: "Inside the studio" },
-  { image: U("photo-1595777457583-95e059d581b8"), caption: "Bridal couture" },
-  { image: U("photo-1617059062460-1dec8e8e8b0a"), caption: "Festive set" },
+  { image: "/img/olive-suit.jpg", caption: "Printed lawn finish" },
 ];
 
 export interface Step { num: string; title: string; body: string }
 export const STEPS: Step[] = [
-  { num: "01", title: "Browse & pick", body: "Choose a stitched piece, fabric, or a custom design from our collection." },
-  { num: "02", title: "Add to cart", body: "Select size, stitched or unstitched, and quantity — then add to your cart." },
-  { num: "03", title: "Order on WhatsApp", body: "Tap ‘Order on WhatsApp’ and your full order opens in chat, ready to send." },
-  { num: "04", title: "Stitched & shipped", body: "We confirm, stitch with care, and deliver — anywhere in the world." },
+  { num: "01", title: "Share Your Design", body: "Send us your design inspiration or choose from our collection." },
+  { num: "02", title: "Provide Your Measurements", body: "Share your measurements using our guide or request sizing assistance." },
+  { num: "03", title: "Confirm Your Order", body: "We’ll finalize the details, pricing, and delivery timeline with you." },
+  { num: "04", title: "Stitched & Delivered", body: "Your outfit is expertly stitched, quality-checked, and delivered to your doorstep." },
 ];
 
 export interface Stat { value: number; suffix: string; label: string }
@@ -126,6 +136,15 @@ export const FAQS: Faq[] = [
   { q: "Do you deliver outside Pakistan?", a: "Yes — we ship worldwide with tracked delivery. Shipping cost depends on destination and weight, confirmed before dispatch." },
   { q: "What are the payment options?", a: "Cash on Delivery within Pakistan, and bank transfer for international orders. Final total and payment details are confirmed on WhatsApp." },
   { q: "Can I get alterations if the fit isn’t right?", a: "Absolutely. If something needs adjusting, message us and we’ll arrange alterations to get your perfect fit." },
+];
+
+
+export interface Why { title: string; body: string; icon: string }
+export const WHY: Why[] = [
+  { title: "Custom Stitching", body: "Made-to-order outfits stitched to your exact taste and style.", icon: "scissors" },
+  { title: "Perfect Measurements", body: "Tailored to your precise measurements for a flawless fit.", icon: "ruler" },
+  { title: "Premium Finishing", body: "Clean, durable finishing and detailing on every single piece.", icon: "sparkles" },
+  { title: "On-Time Delivery", body: "Confirmed timelines and tracked delivery, in Pakistan & worldwide.", icon: "truck" },
 ];
 
 export interface Post {

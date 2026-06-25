@@ -40,7 +40,7 @@ export function AddToCart({ product }: { product: Product }) {
               key={String(o.v)}
               onClick={() => setStitched(o.v)}
               className={`rounded-full border px-4 py-2 text-sm transition ${
-                stitched === o.v ? "border-rust bg-rust text-white" : "border-[var(--line)] text-ink hover:border-rust"
+                stitched === o.v ? "border-rust bg-rust text-ink" : "border-[var(--line)] text-ink hover:border-rust"
               }`}
             >
               {o.l}

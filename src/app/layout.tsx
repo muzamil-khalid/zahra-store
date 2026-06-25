@@ -28,12 +28,12 @@ export const metadata: Metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org", "@type": "ClothingStore",
-  name: SITE.name, description: SITE.tagline, email: SITE.email, telephone: `+92${SITE.phone.replace(/\s|^0/g, "")}`,
+  name: SITE.name, description: SITE.tagline, telephone: `+92${SITE.phone.replace(/\s|^0/g, "")}`,
   image: `${SITE.url}/img/hero-model.jpg`, logo: `${SITE.url}/logo.png`, url: SITE.url, priceRange: "$$",
   address: { "@type": "PostalAddress", addressLocality: "Karachi", addressCountry: "PK" },
   areaServed: "Worldwide",
   openingHours: "Mo-Sa 10:00-20:00",
-  sameAs: ["https://instagram.com/zahra.stitching.studio"],
+  sameAs: ["https://www.instagram.com/zahra.stitching.studio", "https://www.facebook.com/profile.php?id=100086684887102", "https://www.tiktok.com/@adeelchaudhry33"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

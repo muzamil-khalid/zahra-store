@@ -9,10 +9,11 @@ export function ClosingCTA() {
     <section className="bg-paper py-[clamp(4rem,9vw,8.5rem)] text-center">
       <div className="container-x">
         <AnimatedTitle
-          text="Reach out & discover bespoke stitching"
+          text="Ready for a Perfect Fit?"
           className="mx-auto max-w-[16ch] font-display text-[clamp(2.2rem,6.5vw,5.4rem)] font-medium leading-[1.04] text-ink"
-          accent="discover"
+          accent="Perfect"
         />
+        <Reveal><p className="mx-auto mt-5 max-w-[44ch] text-[1.02rem] leading-relaxed text-muted">Available 24/7 for orders &amp; custom stitching requests — message us and we’ll get started.</p></Reveal>
         <Reveal>
           <div className="mt-9">
             <WaButton message="Hi Zahra Stitching Studio! I'd like to discuss an order." className="btn btn-rust btn-lg">

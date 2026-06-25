@@ -35,7 +35,7 @@ export function Faq({ limit, heading = true }: { limit?: number; heading?: boole
                     aria-expanded={isOpen}
                   >
                     <span className={`font-display text-[1.08rem] transition-colors ${isOpen ? "text-rust" : "text-ink"}`}>{f.q}</span>
-                    <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[var(--line)] transition-all duration-300 ${isOpen ? "rotate-45 border-rust bg-rust text-white" : "text-rust"}`}>
+                    <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[var(--line)] transition-all duration-300 ${isOpen ? "rotate-45 border-rust bg-rust text-ink" : "text-rust"}`}>
                       <Plus size={16} />
                     </span>
                   </button>

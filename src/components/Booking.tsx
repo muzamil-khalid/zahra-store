@@ -52,7 +52,7 @@ export function Booking() {
         </div>
 
         <Reveal>
-          <form onSubmit={submit} className="rounded-[8px] bg-paper p-[clamp(1.6rem,3vw,2.6rem)] text-[#1d222b] shadow-[0_40px_80px_-40px_rgba(0,0,0,.6)]">
+          <form onSubmit={submit} className="rounded-[8px] bg-paper p-[clamp(1.6rem,3vw,2.6rem)] text-[#2B2B2B] shadow-[0_40px_80px_-40px_rgba(0,0,0,.6)]">
             <h3 className="mb-6 text-center font-display text-[1.5rem] text-ink">Book a stitching consultation</h3>
             <div className="mb-4">
               <label className="field-label" htmlFor="bf-service">Service</label>

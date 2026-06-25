@@ -25,7 +25,7 @@ function ShopInner() {
                 key={t.id}
                 onClick={() => setCat(t.id)}
                 className={`rounded-full border px-5 py-2 text-sm transition ${
-                  cat === t.id ? "border-rust bg-rust text-white" : "border-[var(--line)] text-ink hover:border-rust"
+                  cat === t.id ? "border-rust bg-rust text-ink" : "border-[var(--line)] text-ink hover:border-rust"
                 }`}
               >
                 {t.name}

@@ -18,7 +18,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
           <Img src={product.images[0]} alt={product.name} seed={product.slug} width={700} height={950}
             className="h-full w-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" />
           {product.badge && (
-            <span className="absolute left-3 top-3 rounded-full bg-rust px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-white">
+            <span className="absolute left-3 top-3 rounded-full bg-rust px-3 py-1 text-[0.62rem] font-semibold uppercase tracking-[0.12em] text-ink">
               {product.badge}
             </span>
           )}

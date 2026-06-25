@@ -26,7 +26,7 @@ export function Process() {
           {STEPS.map((s, i) => (
             <Reveal key={s.num} delay={i}>
               <div className="relative rounded-[8px] border border-[var(--line)] bg-paper p-[1.8rem_1.4rem]">
-                <span className="relative z-[1] mb-4 grid h-14 w-14 place-items-center rounded-full bg-rust font-display text-[1.4rem] text-white">{s.num}</span>
+                <span className="relative z-[1] mb-4 grid h-14 w-14 place-items-center rounded-full bg-rust font-display text-[1.4rem] text-ink">{s.num}</span>
                 <h3 className="font-display text-[1.25rem] text-ink">{s.title}</h3>
                 <p className="mt-2 text-[0.92rem] text-muted">{s.body}</p>
               </div>

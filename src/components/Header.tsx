@@ -52,7 +52,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <button onClick={openCart} aria-label="Open cart" className="relative grid h-10 w-10 place-items-center rounded-full border border-[var(--line)] text-ink transition hover:border-rust">
               <ShoppingBag size={18} strokeWidth={1.6} />
-              {count > 0 && <span className="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-rust px-1 text-[0.62rem] font-bold text-white">{count}</span>}
+              {count > 0 && <span className="absolute -right-1 -top-1 grid h-5 min-w-5 place-items-center rounded-full bg-rust px-1 text-[0.62rem] font-bold text-ink">{count}</span>}
             </button>
             <button className="relative h-[20px] w-[28px] lg:hidden" aria-label="Menu" aria-expanded={open} onClick={() => setOpen((v) => !v)}>
               <span className={`absolute left-0 h-[2px] w-full bg-ink transition-all duration-300 ${open ? "top-[9px] rotate-45" : "top-0"}`} />

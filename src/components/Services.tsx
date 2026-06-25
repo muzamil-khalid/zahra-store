@@ -57,7 +57,7 @@ export function Services() {
                   <Img src={current.image} alt={current.title} seed={current.key} className="h-full w-full object-cover" />
                 </motion.div>
               </div>
-              <div className="flex flex-col bg-ivory p-[clamp(1.6rem,3vw,2.8rem)] text-[#1d222b]">
+              <div className="flex flex-col bg-ivory p-[clamp(1.6rem,3vw,2.8rem)] text-[#2B2B2B]">
                 <h3 className="h-display text-[clamp(1.4rem,2.4vw,2rem)]">{current.title}</h3>
                 <p className="mt-3 text-muted">{current.body}</p>
                 <ul className="ticks my-7">

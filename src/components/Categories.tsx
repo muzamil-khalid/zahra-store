@@ -10,8 +10,8 @@ export function Categories() {
     <section className="section-y bg-paper">
       <div className="container-x">
         <div className="mb-10 text-center">
-          <Reveal as="span" className="script">browse</Reveal>
-          <Reveal><h2 className="section-title mt-2">Find your kind of beautiful</h2></Reveal>
+          <Reveal as="span" className="script">explore</Reveal>
+          <Reveal><h2 className="section-title mt-2">Explore Our Collections</h2></Reveal>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {CATEGORIES.map((c, i) => (

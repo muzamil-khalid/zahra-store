@@ -3,13 +3,13 @@
 import Link from "next/link";
 import { SITE } from "@/lib/site";
 import { waLink } from "@/lib/whatsapp";
-import { ArrowUp, MessageCircle, Phone, Mail, Instagram, Facebook, Clock, MessageSquare, CreditCard, Globe, MapPin } from "lucide-react";
+import { ArrowUp, MessageCircle, Phone, Instagram, Facebook, Music2, Clock, MessageSquare, CreditCard, Globe, MapPin } from "lucide-react";
 
 const QUICK = [
   { label: "Shop", href: "/shop" },
   { label: "Custom Stitching", href: "/contact" },
   { label: "How It Works", href: "/about" },
-  { label: "Size Guide", href: "/faq" },
+  { label: "Size Guide", href: "/size-guide" },
   { label: "FAQs", href: "/faq" },
   { label: "Blog", href: "/blog" },
 ];
@@ -53,9 +53,9 @@ export function Footer() {
           <ul className="space-y-[0.7rem] text-[0.92rem]">
             <li><a href={waLink("Hi Zahra Stitching Studio!")} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><MessageCircle size={16} className="text-gold" /> WhatsApp: {SITE.phone}</a></li>
             <li><a href={`tel:+92${SITE.phone.replace(/\s|^0/g, "")}`} className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><Phone size={16} className="text-gold" /> {SITE.phone}</a></li>
-            <li><a href={`mailto:${SITE.email}`} className="inline-flex items-center gap-2.5 break-all transition-colors hover:text-gold"><Mail size={16} className="text-gold" /> {SITE.email}</a></li>
-            <li><a href="https://instagram.com/zahra.stitching.studio" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><Instagram size={16} className="text-gold" /> {SITE.instagram}</a></li>
-            <li><a href="#" className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><Facebook size={16} className="text-gold" /> Facebook</a></li>
+            <li><a href="https://www.instagram.com/zahra.stitching.studio" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><Instagram size={16} className="text-gold" /> {SITE.instagram}</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=100086684887102" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><Facebook size={16} className="text-gold" /> Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@adeelchaudhry33?_r=1&_t=ZS-97V5wXjfFcv" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 transition-colors hover:text-gold"><Music2 size={16} className="text-gold" /> TikTok</a></li>
           </ul>
         </div>
 
