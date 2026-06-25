@@ -39,14 +39,14 @@ export function StitchAssemble() {
             style={{ y: sTop, x: sTopX }}
             className="absolute left-0 top-0 h-1/2 w-full overflow-hidden rounded-t-full"
           >
-            <div className="h-full w-full" style={{ background: "linear-gradient(135deg, #efe8dd, #d3c4ad)" }} />
+            <div className="h-full w-full" style={{ background: "linear-gradient(135deg, #F4ECD9, #d8c39a)" }} />
           </motion.div>
           {/* bottom half (rust) */}
           <motion.div
             style={{ y: sBot, x: sBotX }}
             className="absolute bottom-0 left-0 h-1/2 w-full overflow-hidden rounded-b-full"
           >
-            <div className="h-full w-full" style={{ background: "linear-gradient(135deg, #b5552e, #98461f)" }} />
+            <div className="h-full w-full" style={{ background: "linear-gradient(135deg, #E1C16E, #8D734B)" }} />
           </motion.div>
 
           {/* running-stitch seam across the join */}

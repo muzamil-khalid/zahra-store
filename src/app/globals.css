@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 :root {
-  --ivory: #f4efe8;
-  --paper: #fbf9f5;
-  --ink: #11161f;
-  --ink-2: #0c1017;
-  --rust: #b5552e;
-  --rust-dark: #98461f;
-  --cocoa: #6e4a32;
-  --taupe: #c9bca8;
-  --muted: #7c7468;
-  --muted-light: #b7ac9c;
-  --line: rgba(17, 22, 31, 0.12);
-  --line-light: rgba(255, 255, 255, 0.16);
+  --paper: #FFFDF5;
+  --ivory: #F4ECD9;
+  --ink: #3A2A22;
+  --ink-2: #2c201a;
+  --rust: #8D734B;
+  --rust-dark: #6f5a39;
+  --gold: #E1C16E;
+  --cocoa: #543D32;
+  --taupe: #cdb98f;
+  --muted: #8a7c69;
+  --muted-light: #bcae8c;
+  --line: rgba(84, 61, 50, 0.14);
+  --line-light: rgba(255, 253, 245, 0.16);
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -99,19 +100,19 @@ body {
 .zhero .grain{position:absolute;inset:0;z-index:1;pointer-events:none;opacity:.05;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 .zhero .blob{position:absolute;filter:blur(8px);opacity:.5;mix-blend-mode:multiply}
 .zhero .b1{width:240px;height:240px;left:0;top:0;background:var(--taupe);animation:zmorph 15s ease-in-out infinite}
-.zhero .b2{width:320px;height:320px;right:0;bottom:0;background:#e7d8c4;animation:zmorph 19s ease-in-out infinite reverse}
-.zhero .b3{width:120px;height:120px;left:64%;top:20%;background:#dcae93;opacity:.35;animation:zmorph 11s ease-in-out infinite}
+.zhero .b2{width:320px;height:320px;right:0;bottom:0;background:#e9dcc0;animation:zmorph 19s ease-in-out infinite reverse}
+.zhero .b3{width:120px;height:120px;left:64%;top:20%;background:#d8c39a;opacity:.4;animation:zmorph 11s ease-in-out infinite}
 @keyframes zmorph{0%,100%{border-radius:42% 58% 60% 40%/45% 45% 55% 55%;transform:translate(0,0) rotate(0)}50%{border-radius:58% 42% 42% 58%/55% 60% 40% 45%;transform:translate(14px,-16px) rotate(10deg)}}
 .zhero .marq{position:absolute;top:50%;left:0;width:240%;transform:translateY(-50%);display:flex;white-space:nowrap;opacity:.045;animation:zmarq 24s linear infinite}
 .zhero .marq b{font-family:var(--font-playfair),serif;font-weight:600;text-transform:uppercase;font-size:120px;color:var(--ink);padding:0 28px}
 @keyframes zmarq{to{transform:translate(-50%,-50%)}}
 .zhero .sw{position:absolute;border-radius:5px;opacity:.7;box-shadow:0 8px 18px -10px rgba(17,22,31,.4)}
-.zhero .sw1{width:34px;height:34px;left:16%;top:26%;background:linear-gradient(135deg,#b5552e,#98461f);animation:zdrift 7s ease-in-out infinite}
-.zhero .sw2{width:26px;height:26px;right:20%;top:30%;background:linear-gradient(135deg,#6e4a32,#9a7350);animation:zdrift 9s ease-in-out infinite}
-.zhero .sw3{width:30px;height:30px;left:24%;bottom:22%;background:linear-gradient(135deg,#c9bca8,#a8997f);animation:zdrift 8s ease-in-out infinite}
+.zhero .sw1{width:34px;height:34px;left:16%;top:26%;background:linear-gradient(135deg,#E1C16E,#8D734B);animation:zdrift 7s ease-in-out infinite}
+.zhero .sw2{width:26px;height:26px;right:20%;top:30%;background:linear-gradient(135deg,#8D734B,#543D32);animation:zdrift 9s ease-in-out infinite}
+.zhero .sw3{width:30px;height:30px;left:24%;bottom:22%;background:linear-gradient(135deg,#d8c39a,#b59b63);animation:zdrift 8s ease-in-out infinite}
 @keyframes zdrift{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-16px) rotate(8deg)}}
 .zhero .ring{position:absolute;left:8%;bottom:13%;width:120px;height:120px;border:1px dashed var(--rust);border-radius:50%;opacity:.3;animation:zspin 28s linear infinite}
-.zhero .spool{position:absolute;left:11%;top:15%;width:46px;height:46px;border-radius:50%;border:6px solid var(--cocoa);background:repeating-radial-gradient(circle,var(--cocoa) 0 2px,#a07a55 2px 5px);opacity:.55;animation:zspin 6s linear infinite}
+.zhero .spool{position:absolute;left:11%;top:15%;width:46px;height:46px;border-radius:50%;border:6px solid var(--cocoa);background:repeating-radial-gradient(circle,var(--cocoa) 0 2px,#b59b63 2px 5px);opacity:.55;animation:zspin 6s linear infinite}
 @keyframes zspin{to{transform:rotate(360deg)}}
 .zhero .scissors{position:absolute;right:12%;top:17%;color:var(--rust);opacity:.6;transform-origin:50% 80%;animation:zsnip 4s ease-in-out infinite;display:inline-flex}
 @keyframes zsnip{0%,86%,100%{transform:rotate(0)}93%{transform:rotate(-20deg)}}
@@ -137,4 +138,18 @@ body {
 @media (prefers-reduced-motion: reduce){
   .zhero .blob,.zhero .marq,.zhero .sw,.zhero .ring,.zhero .spool,.zhero .scissors,.zhero .thread path,.zhero .baseline,.zhero .needle,.zhero .cue .ch{animation:none !important}
   .zhero .sew text{animation:none !important;stroke-dashoffset:0}
+}
+
+/* ===== Hero extra stitching elements ===== */
+.zhero .flower{position:absolute;color:var(--rust);opacity:.4;animation:zspin 30s linear infinite}
+.zhero .fl1{width:78px;height:78px;left:13%;top:24%;color:var(--gold);opacity:.55;animation-duration:26s}
+.zhero .fl2{width:96px;height:96px;right:11%;bottom:16%;color:var(--rust);opacity:.4;animation-direction:reverse;animation-duration:34s}
+.zhero .fl3{width:54px;height:54px;right:26%;top:62%;color:var(--gold);opacity:.4;animation-duration:22s}
+.zhero .thread2 path{stroke:var(--gold);opacity:.5;animation-duration:4s}
+.zhero .thread3 path{stroke:var(--rust);opacity:.32;animation-duration:3.6s}
+.zhero .needlesvg{position:absolute;right:6%;top:50%;width:120px;transform:translateY(-50%);overflow:visible}
+.zhero .needlesvg .ndl{animation:zbob 2.2s ease-in-out infinite}
+@media (max-width:640px){.zhero .needlesvg{display:none}.zhero .fl2{width:64px;height:64px}}
+@media (prefers-reduced-motion: reduce){
+  .zhero .flower,.zhero .needlesvg .ndl{animation:none !important}
 }
